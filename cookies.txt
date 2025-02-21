@@ -1,5 +1,0 @@
-# HTTrack Website Copier Cookie File
-# This file format is compatible with Netscape cookies
-www.xiaoyaojingjv.cn	TRUE	/	FALSE	1999999999	argon_user_token	2338bd2d5489ee161997c5ea76804811
-www.xiaoyaojingjv.cn	TRUE	/	FALSE	1999999999	PHPSESSID	t8u0tenb7e2dm6k6bc9rsl87r3
-
