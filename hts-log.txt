@@ -1,0 +1,30 @@
+HTTrack3.49-2+htsswf+htsjava launched on Fri, 21 Feb 2025 08:40:36 at http://www.xiaoyaojingjv.cn +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar
+(winhttrack -qwC2%Ps2u1%s%uN0%I0p3DaK0H0%kf2A25000%f#f -F "Mozilla/4.5 (compatible; HTTrack 3.0x; Windows 98)" -%F "<!-- Mirrored from %s%s by HTTrack Website Copier/3.x [XR&CO'2014], %s -->" -%l "en, *" http://www.xiaoyaojingjv.cn -O1 "E:\HTTrack\baocun\myboke" +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+08:40:36	Warning: 	Moved Permanently for www.xiaoyaojingjv.cn/robots.txt
+08:40:36	Warning: 	File has moved from www.xiaoyaojingjv.cn/robots.txt to http://www.xiaoyaojingjv.cn/robots.txt/
+08:42:52	Warning: 	Retry after error -4 (No data (connection closed)) at link www.xiaoyaojingjv.cn/?cat=6 (from www.xiaoyaojingjv.cn/)
+08:42:54	Warning: 	Retry after error -4 (No data (connection closed)) at link www.xiaoyaojingjv.cn/?p=20 (from www.xiaoyaojingjv.cn/)
+08:43:11	Warning: 	Moved Permanently for www.xiaoyaojingjv.cn/?p=64
+08:43:11	Warning: 	File has moved from www.xiaoyaojingjv.cn/?p=64 to http://www.xiaoyaojingjv.cn/?page_id=64
+08:43:12	Warning: 	Moved Permanently for www.xiaoyaojingjv.cn/?p=67
+08:43:12	Warning: 	File has moved from www.xiaoyaojingjv.cn/?p=67 to http://www.xiaoyaojingjv.cn/?page_id=67
+08:43:12	Warning: 	Retry after error -5 (error:00000005:lib(0):func(0):DH lib) at link https://blog.lix.moe/wp-content/uploads/2023/12/lix_avatar.jpeg (from www.xiaoyaojingjv.cn/?page_id=67)
+08:43:12	Warning: 	Retry after error -4 (No data (connection closed)) at link www.xiaoyaojingjv.cn/xmlrpc.php (from www.xiaoyaojingjv.cn/?page_id=2)
+08:43:12	Warning: 	Retry after error -4 (No data (connection closed)) at link www.xiaoyaojingjv.cn/index.php?rest_route=/wp/v2/pages/2 (from www.xiaoyaojingjv.cn/?page_id=2)
+08:43:12	Warning: 	Moved Permanently for www.xiaoyaojingjv.cn/?p=2
+08:43:12	Warning: 	File has moved from www.xiaoyaojingjv.cn/?p=2 to http://www.xiaoyaojingjv.cn/?page_id=2
+08:43:12	Warning: 	Retry after error -4 (No data (connection closed)) at link www.xiaoyaojingjv.cn/index.php?rest_route=%2Foembed%2F1.0%2Fembed&url=http%3A%2F%2Fwww.xiaoyaojingjv.cn%2F%3Fpage_id%3D2 (from www.xiaoyaojingjv.cn/?page_id=2)
+08:43:13	Warning: 	Moved Permanently for www.xiaoyaojingjv.cn/?p=74
+08:43:13	Warning: 	File has moved from www.xiaoyaojingjv.cn/?p=74 to http://www.xiaoyaojingjv.cn/?page_id=74
+08:43:18	Warning: 	Retry after error -5 (error:00000005:lib(0):func(0):DH lib) at link https://blog.lix.moe/wp-content/uploads/2023/12/lix_avatar.jpeg (from www.xiaoyaojingjv.cn/?page_id=67)
+08:43:18	Error: 	"Method Not Allowed" (405) at link www.xiaoyaojingjv.cn/xmlrpc.php (from www.xiaoyaojingjv.cn/?page_id=2)
+08:43:23	Error: 	"error:00000005:lib(0):func(0):DH lib" (-5) after 2 retries at link https://blog.lix.moe/wp-content/uploads/2023/12/lix_avatar.jpeg (from www.xiaoyaojingjv.cn/?page_id=67)
+
+HTTrack Website Copier/3.49-2 mirror complete in 2 minutes 47 seconds : 181 links scanned, 167 files written (7005635 bytes overall) [3415331 bytes received at 20451 bytes/sec], 6246013 bytes transferred using HTTP compression in 132 files, ratio 40%, 9.9 requests per connection
+(2 errors, 17 warnings, 0 messages)
