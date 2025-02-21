@@ -1,0 +1,1287 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="no-js immersion-color banner-as-cover toolbar-blur article-header-style-2 ">
+
+<!-- Mirrored from www.xiaoyaojingjv.cn/?p=147 by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 21 Feb 2025 00:43:05 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+	<meta charset="UTF-8">
+			<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<meta property="og:title" content="SQL &#8211; 逍遥静居">
+	<meta property="og:type" content="article">
+	<meta property="og:url" content="index.html">
+				<meta name="description" content="用户权限及角色 创建用户 with auth_plugin是指定用户口令加密方式，不写就是默认。role是指定&hellip;">
+			<meta property="og:description" content="用户权限及角色 创建用户 with auth_plugin是指定用户口令加密方式，不写就是默认。role是指定&hellip;">
+	
+				<meta name="keywords" content="逍遥静居">
+	
+	
+	<meta name="theme-color" content="#795547">
+	<meta name="theme-color-rgb" content="121,85,71">
+	<meta name="theme-color-origin" content="#795547">
+	<meta name="argon-enable-custom-theme-color" content="true">
+
+
+	<meta name="theme-card-radius" content="15">
+	<meta name="theme-card-radius-origin" content="15">
+
+	<meta name="theme-version" content="1.3.5">
+
+	<link rel="profile" href="http://gmpg.org/xfn/11">
+		<link rel="pingback" href="xmlrpc.php">
+			<title>SQL &#8211; 逍遥静居</title>
+<meta name='robots' content='max-image-preview:large' />
+<link rel='dns-prefetch' href='index.html' />
+<link rel='dns-prefetch' href='http://fonts.googleapis.com/' />
+<link rel="alternate" type="application/rss+xml" title="逍遥静居 &raquo; SQL 评论 Feed" href="index81e3.html?feed=rss2&amp;p=147" />
+<script type="text/javascript">
+/* <![CDATA[ */
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15.0.3\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15.0.3\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/www.xiaoyaojingjv.cn\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.5.2"}};
+/*! This file is auto-generated */
+!function(i,n){var o,s,e;function c(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function p(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data),r=(e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0),new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data));return t.every(function(e,t){return e===r[t]})}function u(e,t,n){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\uddfa\ud83c\uddf3","\ud83c\uddfa\u200b\ud83c\uddf3")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!n(e,"\ud83d\udc26\u200d\u2b1b","\ud83d\udc26\u200b\u2b1b")}return!1}function f(e,t,n){var r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):i.createElement("canvas"),a=r.getContext("2d",{willReadFrequently:!0}),o=(a.textBaseline="top",a.font="600 32px Arial",{});return e.forEach(function(e){o[e]=t(a,e,n)}),o}function t(e){var t=i.createElement("script");t.src=e,t.defer=!0,i.head.appendChild(t)}"undefined"!=typeof Promise&&(o="wpEmojiSettingsSupports",s=["flag","emoji"],n.supports={everything:!0,everythingExceptFlag:!0},e=new Promise(function(e){i.addEventListener("DOMContentLoaded",e,{once:!0})}),new Promise(function(t){var n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(s),u.toString(),p.toString()].join(",")+"));",r=new Blob([e],{type:"text/javascript"}),a=new Worker(URL.createObjectURL(r),{name:"wpTestEmojiSupports"});return void(a.onmessage=function(e){c(n=e.data),a.terminate(),t(n)})}catch(e){}c(n=f(s,u,p))}t(n)}).then(function(e){for(var t in e)n.supports[t]=e[t],n.supports.everything=n.supports.everything&&n.supports[t],"flag"!==t&&(n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&n.supports[t]);n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&!n.supports.flag,n.DOMReady=!1,n.readyCallback=function(){n.DOMReady=!0}}).then(function(){return e}).then(function(){var e;n.supports.everything||(n.readyCallback(),(e=n.source||{}).concatemoji?t(e.concatemoji):e.wpemoji&&e.twemoji&&(t(e.twemoji),t(e.wpemoji)))}))}((window,document),window._wpemojiSettings);
+/* ]]> */
+</script>
+<link rel='stylesheet' id='argon_css_merged-css' href='wp-content/themes/argon/assets/argon_css_mergede34c.css?ver=1.3.5' type='text/css' media='all' />
+<link rel='stylesheet' id='style-css' href='wp-content/themes/argon/stylee34c.css?ver=1.3.5' type='text/css' media='all' />
+<link rel='stylesheet' id='googlefont-css' href='http://fonts.googleapis.com/css?family=Open+Sans%3A300%2C400%2C600%2C700%7CNoto+Serif+SC%3A300%2C600&amp;display=swap&amp;ver=6.5.2' type='text/css' media='all' />
+<style id='wp-emoji-styles-inline-css' type='text/css'>
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+</style>
+<link rel='stylesheet' id='wp-block-library-css' href='wp-includes/css/dist/block-library/style.mine63c.css?ver=6.5.2' type='text/css' media='all' />
+<style id='classic-theme-styles-inline-css' type='text/css'>
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+</style>
+<style id='global-styles-inline-css' type='text/css'>
+body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flow > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-flow > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-flow > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-constrained > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-constrained > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width: var(--wp--style--global--content-size);margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignwide{max-width: var(--wp--style--global--wide-size);}body .is-layout-flex{display: flex;}body .is-layout-flex{flex-wrap: wrap;align-items: center;}body .is-layout-flex > *{margin: 0;}body .is-layout-grid{display: grid;}body .is-layout-grid > *{margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+.wp-block-navigation a:where(:not(.wp-element-button)){color: inherit;}
+:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
+.wp-block-pullquote{font-size: 1.5em;line-height: 1.6;}
+</style>
+<script type="text/javascript" src="wp-content/themes/argon/assets/argon_js_mergede34c.js?ver=1.3.5" id="argon_js_merged-js"></script>
+<script type="text/javascript" src="wp-content/themes/argon/assets/js/argon.mine34c.js?ver=1.3.5" id="argonjs-js"></script>
+<link rel="https://api.w.org/" href="index52f0.json?rest_route=/" /><link rel="alternate" type="application/json" href="index5151.json?rest_route=/wp/v2/posts/147" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="xmlrpc0db0.php?rsd" />
+<meta name="generator" content="WordPress 6.5.2" />
+<link rel="canonical" href="index2fa7.html?p=147" />
+<link rel='shortlink' href='index2fa7.html?p=147' />
+<link rel="alternate" type="application/json+oembed" href="indexb1a4.json?rest_route=%2Foembed%2F1.0%2Fembed&amp;url=http%3A%2F%2Fwww.xiaoyaojingjv.cn%2F%3Fp%3D147" />
+<link rel="alternate" type="text/xml+oembed" href="indexb5dd.php?rest_route=%2Foembed%2F1.0%2Fembed&amp;url=http%3A%2F%2Fwww.xiaoyaojingjv.cn%2F%3Fp%3D147&amp;format=xml" />
+<link rel="icon" href="wp-content/uploads/2024/11/cropped-cropped-%e5%be%ae%e4%bf%a1%e5%9b%be%e7%89%87_20241127202802-e1732710528199-32x32.jpg" sizes="32x32" />
+<link rel="icon" href="wp-content/uploads/2024/11/cropped-cropped-%e5%be%ae%e4%bf%a1%e5%9b%be%e7%89%87_20241127202802-e1732710528199-192x192.jpg" sizes="192x192" />
+<link rel="apple-touch-icon" href="wp-content/uploads/2024/11/cropped-cropped-%e5%be%ae%e4%bf%a1%e5%9b%be%e7%89%87_20241127202802-e1732710528199-180x180.jpg" />
+<meta name="msapplication-TileImage" content="http://www.xiaoyaojingjv.cn/wp-content/uploads/2024/11/cropped-cropped-微信图片_20241127202802-e1732710528199-270x270.jpg" />
+		<script>
+		document.documentElement.classList.remove("no-js");
+		var argonConfig = {
+			wp_path: "/",
+			language: "zh_CN",
+			dateFormat: "YMD",
+							zoomify: false,
+						pangu: "false",
+							lazyload: {
+					threshold: 800,
+					effect: "fadeIn"
+				},
+						fold_long_comments: false,
+			fold_long_shuoshuo: false,
+			disable_pjax: false,
+			pjax_animation_durtion: 600,
+			headroom: "false",
+			waterflow_columns: "2and3",
+			code_highlight: {
+				enable: true,
+				hide_linenumber: false,
+				transparent_linenumber: false,
+				break_line: false			}
+		}
+	</script>
+	<script>
+		var darkmodeAutoSwitch = "time";
+		function setDarkmode(enable){
+			if (enable == true){
+				$("html").addClass("darkmode");
+			}else{
+				$("html").removeClass("darkmode");
+			}
+			$(window).trigger("scroll");
+		}
+		function toggleDarkmode(){
+			if ($("html").hasClass("darkmode")){
+				setDarkmode(false);
+				sessionStorage.setItem("Argon_Enable_Dark_Mode", "false");
+			}else{
+				setDarkmode(true);
+				sessionStorage.setItem("Argon_Enable_Dark_Mode", "true");
+			}
+		}
+		if (sessionStorage.getItem("Argon_Enable_Dark_Mode") == "true"){
+			setDarkmode(true);
+		}
+		function toggleDarkmodeByPrefersColorScheme(media){
+			if (sessionStorage.getItem('Argon_Enable_Dark_Mode') == "false" || sessionStorage.getItem('Argon_Enable_Dark_Mode') == "true"){
+				return;
+			}
+			if (media.matches){
+				setDarkmode(true);
+			}else{
+				setDarkmode(false);
+			}
+		}
+		function toggleDarkmodeByTime(){
+			if (sessionStorage.getItem('Argon_Enable_Dark_Mode') == "false" || sessionStorage.getItem('Argon_Enable_Dark_Mode') == "true"){
+				return;
+			}
+			let hour = new Date().getHours();
+			if (hour < 7 || hour >= 22){
+				setDarkmode(true);
+			}else{
+				setDarkmode(false);
+			}
+		}
+		if (darkmodeAutoSwitch == 'system'){
+			var darkmodeMediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+			darkmodeMediaQuery.addListener(toggleDarkmodeByPrefersColorScheme);
+			toggleDarkmodeByPrefersColorScheme(darkmodeMediaQuery);
+		}
+		if (darkmodeAutoSwitch == 'time'){
+			toggleDarkmodeByTime();
+		}
+		if (darkmodeAutoSwitch == 'alwayson'){
+			setDarkmode(true);
+		}
+
+		function toggleAmoledDarkMode(){
+			$("html").toggleClass("amoled-dark");
+			if ($("html").hasClass("amoled-dark")){
+				localStorage.setItem("Argon_Enable_Amoled_Dark_Mode", "true");
+			}else{
+				localStorage.setItem("Argon_Enable_Amoled_Dark_Mode", "false");
+			}
+		}
+		if (localStorage.getItem("Argon_Enable_Amoled_Dark_Mode") == "true"){
+			$("html").addClass("amoled-dark");
+		}else if (localStorage.getItem("Argon_Enable_Amoled_Dark_Mode") == "false"){
+			$("html").removeClass("amoled-dark");
+		}
+	</script>
+	<script>
+		if (navigator.userAgent.indexOf("Safari") !== -1 && navigator.userAgent.indexOf("Chrome") === -1){
+			$("html").addClass("using-safari");
+		}
+	</script>
+
+			<script src="wp-content/themes/argon/assets/vendor/smoothscroll/smoothscroll1_pulse.js"></script>
+	</head>
+
+<style>
+.navbar-brand {
+    font-size: 1.25rem!important;
+}
+</style>
+<style id="themecolor_css">
+		:root{
+		--themecolor: #795547;
+		--themecolor-R: 121;
+		--themecolor-G: 85;
+		--themecolor-B: 71;
+		--themecolor-H: 17;
+		--themecolor-S: 26;
+		--themecolor-L: 38;
+	}
+</style>
+<style id="theme_cardradius_css">
+	:root{
+		--card-radius: 15px;
+	}
+</style>
+
+<body class="post-template-default single single-post postid-147 single-format-standard">
+<div id="toolbar">
+	<header class="header-global">
+		<nav id="navbar-main" class="navbar navbar-main navbar-expand-lg navbar-transparent navbar-light bg-primary headroom--not-bottom headroom--not-top headroom--pinned">
+			<div class="container">
+				<button id="open_sidebar" class="navbar-toggler" type="button" aria-expanded="false" aria-label="Toggle sidebar">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="navbar-brand mr-0">
+															<a class="navbar-brand navbar-title" href="index.html">逍遥静居</a>
+				</div>
+				<div class="navbar-collapse collapse" id="navbar_global">
+					<div class="navbar-collapse-header">
+						<div class="row" style="display: none;">
+							<div class="col-6 collapse-brand"></div>
+							<div class="col-6 collapse-close">
+								<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar_global" aria-controls="navbar_global" aria-expanded="false" aria-label="Toggle navigation">
+									<span></span>
+									<span></span>
+								</button>
+							</div>
+						</div>
+						<div class="input-group input-group-alternative">
+							<div class="input-group-prepend">
+								<span class="input-group-text"><i class="fa fa-search"></i></span>
+							</div>
+							<input id="navbar_search_input_mobile" class="form-control" placeholder="搜索什么..." type="text" autocomplete="off">
+						</div>
+					</div>
+					<ul class='navbar-nav navbar-nav-hover align-items-lg-center'>
+
+										<li class='nav-item'>
+											<a href='index.html' class='nav-link' target='' title=''>
+										  		<i class='ni ni-book-bookmark d-lg-none'></i>
+												<span class='nav-link-inner--text'><i class="fa fa-home"></i>首页</span>
+										  </a>
+</li>
+
+										<li class='nav-item'>
+											<a href='index8091.html?page_id=64' class='nav-link' target='' title=''>
+										  		<i class='ni ni-book-bookmark d-lg-none'></i>
+												<span class='nav-link-inner--text'><i class="fa fa-calendar" aria-hidden="true"></i>归档</span>
+										  </a>
+</li>
+
+										<li class='nav-item'>
+											<a href='index3d3a.html?page_id=67' class='nav-link' target='' title=''>
+										  		<i class='ni ni-book-bookmark d-lg-none'></i>
+												<span class='nav-link-inner--text'><i class="fa fa-link"></i>友情链接</span>
+										  </a>
+</li></ul>					<ul class="navbar-nav align-items-lg-center ml-lg-auto">
+						<li id="navbar_search_container" class="nav-item" data-toggle="modal">
+							<div id="navbar_search_input_container">
+								<div class="input-group input-group-alternative">
+									<div class="input-group-prepend">
+										<span class="input-group-text"><i class="fa fa-search"></i></span>
+									</div>
+									<input id="navbar_search_input" class="form-control" placeholder="搜索什么..." type="text" autocomplete="off">
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div id="navbar_menu_mask" data-toggle="collapse" data-target="#navbar_global"></div>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar_global" aria-controls="navbar_global" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon navbar-toggler-searcg-icon"></span>
+				</button>
+			</div>
+		</nav>
+	</header>
+</div>
+<div class="modal fade" id="argon_search_modal" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title">搜索</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body">
+				<form id="argon_serach_form" method="get" action="http://www.xiaoyaojingjv.cn/">
+	<div class="form-group mb-3">
+		<div class="input-group input-group-alternative">
+			<div class="input-group-prepend">
+				<span class="input-group-text"><i class="fa fa-search"></i></span>
+			</div>
+			<input name="s" class="form-control" placeholder="搜索什么..." type="text"  autocomplete="off" >
+		</div>
+	</div>
+	<div class="text-center">
+		<button onclick="if($('#argon_serach_form input[name=\'s\']').val() != '') {document.getElementById('argon_serach_form').submit();}" type="button" class="btn btn-primary">搜索</button>
+	</div>
+</form>			</div>
+		</div>
+	</div>
+</div>
+<!--Banner-->
+<section id="banner" class="banner section section-lg section-shaped">
+	<div class="shape  shape-primary">
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+	</div>
+
+		<div id="banner_container" class="banner-container container text-center">
+					<div class="banner-title text-white" data-interval="100"><span data-text="逍遥静居" class="banner-title-inner">&nbsp;</span>
+			<span data-text="自得逍遥趣，从来乐静居" class="banner-subtitle d-block">&nbsp;</span></div>
+			</div>
+				<div class="cover-scroll-down">
+			<i class="fa fa-angle-down" aria-hidden="true"></i>
+		</div>
+	</section>
+
+	<style>
+					#banner, #banner .shape {
+				background: transparent !important;
+			}
+				#content:before {
+			content: '';
+			display: block;
+			position: fixed;
+			left: 0;
+			right: 0;
+			top: 0;
+			bottom: 0;
+			z-index: -2;
+			background: url(wp-content/uploads/2024/11/R.jpg);
+			background-position: center;
+			background-size: cover;
+			background-repeat: no-repeat;
+			opacity: 1;
+			transition: opacity .5s ease;
+		}
+		html.darkmode #content:before{
+			filter: brightness(0.65);
+		}
+					#content:after {
+				content: '';
+				display: block;
+				position: fixed;
+				left: 0;
+				right: 0;
+				top: 0;
+				bottom: 0;
+				z-index: -2;
+				background: url(wp-content/uploads/2024/12/%e3%80%90%e5%93%b2%e9%a3%8e%e5%a3%81%e7%ba%b8%e3%80%91%e4%b9%a6%e6%88%bf-%e5%a4%9c%e6%99%9a-scaled.jpg);
+				background-position: center;
+				background-size: cover;
+				background-repeat: no-repeat;
+				opacity: 0;
+				transition: opacity .5s ease;
+			}
+			html.darkmode #content:after {
+				opacity: 1;
+			}
+			html.darkmode #content:before {
+				opacity: 0;
+			}
+			</style>
+
+	<style>
+		#banner:after {
+			content: '';
+			width: 100vw;
+			position: absolute;
+			left: 0;
+			top: 0;
+			height: 120px;
+			background: linear-gradient(180deg, rgba(0,0,0,0.25) 0%, rgba(0,0,0,0.15) 35%, rgba(0,0,0,0) 100%);
+			display: block;
+			z-index: -1;
+		}
+		.banner-title {
+			text-shadow: 0 5px 15px rgba(0, 0, 0, .2);
+		}
+	</style>
+
+<div id="float_action_buttons" class="float-action-buttons fabtns-unloaded">
+	<button id="fabtn_toggle_sides" class="btn btn-icon btn-neutral fabtn shadow-sm" type="button" aria-hidden="true" tooltip-move-to-left="移至左侧" tooltip-move-to-right="移至右侧">
+		<span class="btn-inner--icon fabtn-show-on-right"><i class="fa fa-caret-left"></i></span>
+		<span class="btn-inner--icon fabtn-show-on-left"><i class="fa fa-caret-right"></i></span>
+	</button>
+	<button id="fabtn_back_to_top" class="btn btn-icon btn-neutral fabtn shadow-sm" type="button" aria-label="Back To Top" tooltip="回到顶部">
+		<span class="btn-inner--icon"><i class="fa fa-angle-up"></i></span>
+	</button>
+	<button id="fabtn_go_to_comment" class="btn btn-icon btn-neutral fabtn shadow-sm d-none" type="button"  style='display: none;' aria-label="Comment" tooltip="评论">
+		<span class="btn-inner--icon"><i class="fa fa-comment-o"></i></span>
+	</button>
+	<button id="fabtn_toggle_darkmode" class="btn btn-icon btn-neutral fabtn shadow-sm" type="button"  aria-label="Toggle Darkmode" tooltip-darkmode="夜间模式" tooltip-blackmode="暗黑模式" tooltip-lightmode="日间模式">
+		<span class="btn-inner--icon"><i class="fa fa-moon-o"></i><i class='fa fa-lightbulb-o'></i></span>
+	</button>
+	<button id="fabtn_toggle_blog_settings_popup" class="btn btn-icon btn-neutral fabtn shadow-sm" type="button"  style='display: none;' aria-label="Open Blog Settings Menu" tooltip="设置">
+		<span class="btn-inner--icon"><i class="fa fa-cog"></i></span>
+	</button>
+	<div id="fabtn_blog_settings_popup" class="card shadow-sm" style="opacity: 0;" aria-hidden="true">
+		<div id="close_blog_settings"><i class="fa fa-close"></i></div>
+		<div class="blog-setting-item mt-3">
+			<div style="transform: translateY(-4px);"><div id="blog_setting_toggle_darkmode_and_amoledarkmode" tooltip-switch-to-darkmode="切换到夜间模式" tooltip-switch-to-blackmode="切换到暗黑模式"><span>夜间模式</span><span>暗黑模式</span></div></div>
+			<div style="flex: 1;"></div>
+			<label id="blog_setting_darkmode_switch" class="custom-toggle">
+				<span class="custom-toggle-slider rounded-circle"></span>
+			</label>
+		</div>
+		<div class="blog-setting-item mt-3">
+			<div style="flex: 1;">字体</div>
+			<div>
+				<button id="blog_setting_font_sans_serif" type="button" class="blog-setting-font btn btn-outline-primary blog-setting-selector-left">Sans Serif</button><button id="blog_setting_font_serif" type="button" class="blog-setting-font btn btn-outline-primary blog-setting-selector-right">Serif</button>
+			</div>
+		</div>
+		<div class="blog-setting-item mt-3">
+			<div style="flex: 1;">阴影</div>
+			<div>
+				<button id="blog_setting_shadow_small" type="button" class="blog-setting-shadow btn btn-outline-primary blog-setting-selector-left">浅阴影</button><button id="blog_setting_shadow_big" type="button" class="blog-setting-shadow btn btn-outline-primary blog-setting-selector-right">深阴影</button>
+			</div>
+		</div>
+		<div class="blog-setting-item mt-3 mb-3">
+			<div style="flex: 1;">滤镜</div>
+			<div id="blog_setting_filters" class="ml-3">
+				<button id="blog_setting_filter_off" type="button" class="blog-setting-filter-btn ml-0" filter-name="off">关闭</button>
+				<button id="blog_setting_filter_sunset" type="button" class="blog-setting-filter-btn" filter-name="sunset">日落</button>
+				<button id="blog_setting_filter_darkness" type="button" class="blog-setting-filter-btn" filter-name="darkness">暗化</button>
+				<button id="blog_setting_filter_grayscale" type="button" class="blog-setting-filter-btn" filter-name="grayscale">灰度</button>
+			</div>
+		</div>
+		<div class="blog-setting-item mb-3">
+			<div id="blog_setting_card_radius_to_default" style="cursor: pointer;" tooltip="恢复默认">圆角</div>
+			<div style="flex: 1;margin-left: 20px;margin-right: 8px;transform: translateY(2px);">
+				<div id="blog_setting_card_radius"></div>
+			</div>
+		</div>
+					<div class="blog-setting-item mt-1 mb-3">
+				<div style="flex: 1;">主题色</div>
+				<div id="theme-color-picker" class="ml-3"></div>
+			</div>
+			</div>
+	<button id="fabtn_reading_progress" class="btn btn-icon btn-neutral fabtn shadow-sm" type="button" aria-hidden="true" tooltip="阅读进度">
+		<div id="fabtn_reading_progress_bar" style="width: 0%;"></div>
+		<span id="fabtn_reading_progress_details">0%</span>
+	</button>
+</div>
+
+<div id="content" class="site-content">
+
+<div class="page-information-card-container"></div>
+
+<div id="sidebar_mask"></div>
+<aside id="leftbar" class="leftbar widget-area" role="complementary">
+				<div id="leftbar_part1" class="widget widget_search card bg-white shadow-sm border-0">
+			<div class="leftbar-banner card-body">
+				<span class="leftbar-banner-title text-white">每日一言</span>
+
+													<span class="leftbar-banner-subtitle text-white"><span class='hitokoto'></span></span>
+				
+			</div>
+
+			<ul id='leftbar_part1_menu' class='leftbar-menu'></ul>			<div class="card-body text-center leftbar-search-button">
+				<button id="leftbar_search_container" class="btn btn-secondary btn-lg active btn-sm btn-block border-0" role="button">
+					<i class="menu-item-icon fa fa-search mr-0"></i> 搜索					<input id="leftbar_search_input" type="text" placeholder="搜索什么..." class="form-control form-control-alternative" autocomplete="off">
+				</button>
+			</div>
+		</div>
+		<div id="leftbar_part2" class="widget widget_search card bg-white shadow-sm border-0">
+			<div id="leftbar_part2_inner" class="card-body">
+								<div class="nav-wrapper" style="padding-top: 5px;">
+	                <ul class="nav nav-pills nav-fill" role="tablist">
+													<li class="nav-item sidebar-tab-switcher">
+								<a class="active show" id="leftbar_tab_catalog_btn" data-toggle="tab" href="#leftbar_tab_catalog" role="tab" aria-controls="leftbar_tab_catalog" no-pjax>文章目录</a>
+							</li>
+												<li class="nav-item sidebar-tab-switcher">
+							<a class="" id="leftbar_tab_overview_btn" data-toggle="tab" href="#leftbar_tab_overview" role="tab" aria-controls="leftbar_tab_overview" no-pjax>站点概览</a>
+						</li>
+							                </ul>
+				</div>
+				<div>
+					<div class="tab-content" style="padding: 10px 10px 0 10px;">
+													<div class="tab-pane fade active show" id="leftbar_tab_catalog" role="tabpanel" aria-labelledby="leftbar_tab_catalog_btn">
+								<div id="leftbar_catalog"></div>
+								<script type="text/javascript">
+									$(function () {
+										$(document).headIndex({
+											articleWrapSelector: '#post_content',
+											indexBoxSelector: '#leftbar_catalog',
+											subItemBoxClass: "index-subItem-box",
+											itemClass: "index-item",
+											linkClass: "index-link",
+											offset: 80,
+										});
+									})
+								</script>
+															</div>
+												<div class="tab-pane fade text-center" id="leftbar_tab_overview" role="tabpanel" aria-labelledby="leftbar_tab_overview_btn">
+							<div id="leftbar_overview_author_image" style="background-image: url(../49.234.176.211/wp-content/uploads/2024/11/%e5%be%ae%e4%bf%a1%e5%9b%be%e7%89%87_20241127202802-e1732710528199.jpg)" class="rounded-circle shadow-sm" alt="avatar"></div>
+							<h6 id="leftbar_overview_author_name">逍遥静居</h6>
+							<h6 id="leftbar_overview_author_description">啥也不会的小菜</h6>							<nav class="site-state">
+								<div class="site-state-item site-state-posts">
+									<a href="http://49.234.176.211/归档/">
+										<span class="site-state-item-count">9</span>
+										<span class="site-state-item-name">文章</span>
+									</a>
+								</div>
+								<div class="site-state-item site-state-categories">
+									<a data-toggle="modal" data-target="#blog_categories">
+										<span class="site-state-item-count">4</span>
+										<span class="site-state-item-name">分类</span>
+									</a>
+								</div>      
+								<div class="site-state-item site-state-tags">
+									<a data-toggle="modal" data-target="#blog_tags">
+										<span class="site-state-item-count">1</span>
+										<span class="site-state-item-name">标签</span>
+									</a>
+								</div>
+							</nav>
+							<div class='site-author-links'>
+
+											<div class='site-author-links-item'>
+												<a href='indexba53.html?page_id=2' rel='noopener' target='_blank'>简介</a></div>
+
+											<div class='site-author-links-item'>
+												<a href='index8091.html?page_id=64' rel='noopener' target='_blank'>归档</a></div>
+
+											<div class='site-author-links-item'>
+												<a href='indexe527.html?page_id=71' rel='noopener' target='_blank'>说说</a></div>
+
+											<div class='site-author-links-item'>
+												<a href='indexcc4b.html?page_id=74' rel='noopener' target='_blank'>留言板</a></div></div>							<div style='height: 20px;'></div>													</div>
+											</div>
+				</div>
+			</div>
+		</div>
+</aside>
+<div class="modal fade" id="blog_categories" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title">分类</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body">
+				<a href=index0b40.html?cat=9 class='badge badge-secondary tag'>hidden <span class='tag-num'>0</span></a><a href=indexb31a.html?cat=1 class='badge badge-secondary tag'>Java <span class='tag-num'>3</span></a><a href=indexb0b7.html?cat=6 class='badge badge-secondary tag'>数据库 <span class='tag-num'>1</span></a><a href=indexb946.html?cat=5 class='badge badge-secondary tag'>算法 <span class='tag-num'>5</span></a>			</div>
+		</div>
+	</div>
+</div>
+<div class="modal fade" id="blog_tags" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title">标签</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body">
+				<a href=index5d82.html?tag=%e7%ae%97%e6%b3%95 class='badge badge-secondary tag'>算法 <span class='tag-num'>0</span></a>			</div>
+		</div>
+	</div>
+</div>
+
+<div id="primary" class="content-area">
+	<main id="main" class="site-main" role="main">
+		<article class="post post-full card bg-white shadow-sm border-0" id="post-147" class="post-147 post type-post status-publish format-standard hentry category-6">
+	<header class="post-header text-center">
+				<a class="post-title" href="index2fa7.html?p=147">SQL</a>
+		<div class="post-meta">
+			<div class="post-meta-detail post-meta-detail-categories">
+				<i class="fa fa-bookmark-o" aria-hidden="true"></i> <a href="indexb0b7.html?cat=6" target="_blank" class="post-meta-detail-catagory-link">数据库</a></div> <div class="post-meta-devide">|</div> <div class="post-meta-detail post-meta-detail-time">
+					<i class="fa fa-clock-o" aria-hidden="true"></i>
+					<time title="发布于 2024-12-20 18:25:17 | 编辑于 2024-12-21 11:22:26">2024-12-20 18:25
+					</time>
+				</div>					</div>
+			</header>
+
+	<div class="post-content" id="post_content">
+		<div class='post-outdated-info'><i class='fa fa-info-circle' aria-hidden='true'></i>本文最后更新于 61 天前，其中的信息可能已经有所发展或是发生改变。</div>
+<h2 class="wp-block-heading">用户权限及角色</h2>
+
+
+
+<p>创建用户</p>
+
+
+
+<p><code>with auth_plugin</code>是指定用户口令加密方式，不写就是默认。<code>role</code>是指定用户的缺省角色，（缺省角色本质上是一组权限集合）在 MySQL 中，缺省角色（Default Role）是指为用户预先分配的角色，当该用户在登录时没有明确指定角色时，系统会自动使用这个缺省角色。角色是 MySQL 中的一种权限管理机制，角色本质上是一组权限的集合，用户可以通过角色继承这些权限。通过指定缺省角色，可以简化用户权限的管理。</p>
+
+
+
+<pre class="wp-block-code"><code>create user 'usre_name'@'lochalhost' identified with auth_plugin by 'password' DEFAULT ROLE role,.....;</code></pre>
+
+
+
+<p>修改用户</p>
+
+
+
+<pre class="wp-block-code"><code>--修改用户口令密码
+alter user user_name identified with auth_plugin by 'password' DEFAULT ROLE role,......;
+
+--修改用户缺省角色
+alter user user_name DEFAULT ROLE role;
+--设置用户缺省角色,效果与上一个相同
+set DEFAULT ROLE role to user_name;
+
+--启用所有角色
+set role all;
+--启用指定角色
+set ROLE role;
+
+--修改指定用户口令密码
+set password for user_name = 'password';
+--修改当前用户口令密码
+set password = 'password';
+
+--删除用户
+drop user user_name;</code></pre>
+
+
+
+<p>权限管理</p>
+
+
+
+<pre class="wp-block-code"><code>--授予权限
+grant priv_type on &#91;object_type] priv_level to user_or_role;
+/*
+priv_type:具体的权限类型
+object_type:权限所属对象类型
+    	table：表，默认类型
+    	function：存储函数
+	   	procedure：存储过程
+priv_level:指定权限范围
+		* 数据库权限，当前数据库所有对象
+		*.* 全局对象，所有数据库的所有对象
+		db_name.* 数据库权限，指定数据库的所有对象
+		db_name.tbl_name 对象权限，指定数据库的指定对象
+		db_name.routine 对象权限，指定数据库的存储程序对象，过程或函数
+user_or_role:指定被授权者，可以是用户名也可以是角色名
+*/
+
+--回收权限
+revoke priv_type on &#91;object_type] priv_level from user_or_role;
+
+--查看当前登录用户权限
+show grants;
+--查看指定用户权限
+show grants for user_name;
+--查看用户权限以及用户被授予的角色的权限
+show grants for user_name using role;
+
+--删除角色
+drop ROLE role;
+
+--刷新权限： 刷新权限表，使修改的权限立即生效。
+FLUSH PRIVILEGES;
+--刷新表缓存： 刷新表缓存，通常用于在某些情况下强制重新加载表结构。
+FLUSH TABLES;
+--刷新日志： 刷新日志文件（例如二进制日志），可以将当前日志文件关闭并开始一个新的日志文件。
+FLUSH LOGS;
+--刷新临时表： 刷新临时表。
+FLUSH TABLES WITH READ LOCK;
+--刷新所有缓存： 刷新所有缓存，强制清除一些缓存。
+FLUSH STATUS;
+--刷新查询缓存： 刷新查询缓存。
+FLUSH QUERY CACHE;</code></pre>
+
+
+
+<h2 class="wp-block-heading">数据库和表操作</h2>
+
+
+
+<pre class="wp-block-code"><code>--创建数据库
+create database db_name;
+
+--删除数据库
+drop database db_name;
+
+--创建表
+create table tbl_name(id int,name char(10));
+--修改表
+alter table tbl_name add gender char(10) after name;--再name后添加gender
+alter table tbl_name drop gender;--删除gender列
+alter table tbl_name modify name char(10) not null;--设置name非空
+alter table tbl_name rename column old_col_name to new_col_name--修改列的名字
+--删除表
+drop table tbl_name;</code></pre>
+
+
+
+<h2 class="wp-block-heading">表数据操作</h2>
+
+
+
+<pre class="wp-block-code"><code>--插入数据
+insert into tbl_name values(value_list)&#91;,(value_list)];
+--修改数据
+update tbl_name set sol_name = .... &#91;where 条件] &#91;order by...排序] &#91;limit 指定修改的行数];--asc升序，desc降序
+--删除数据
+delete from tbl_name &#91;where 条件] &#91;order by...排序] &#91;limit 指定修改的行数];</code></pre>
+
+
+
+<h2 class="wp-block-heading">表约束</h2>
+
+
+
+<p>主键约束</p>
+
+
+
+<pre class="wp-block-code"><code>--主键约束 primary key
+--添加主键约束
+--创建表时添加
+create table tbl_name(
+	id int primary key,
+    name char(10)
+)
+--或
+create table tbl_name(
+	id int,
+    name char(10),
+    primary key(id)
+)
+--修改表添加主键
+alter table tbl_name add primary key(id);
+
+--删除主键约束
+alter table tbl_name drop primary key;</code></pre>
+
+
+
+<p>外键约束</p>
+
+
+
+<pre class="wp-block-code"><code>--外键约束 references、foreign
+--添加外键约束
+--创建表时添加
+create table tbl_name(
+	id int references ref_tbl_name(ref_col_name),
+    name char(10)
+)
+--或
+create table tbl_name(
+	id int,
+    name char(10),
+    foreign key(id) references ref_tbl_name(ref_col_name)
+)
+--修改表添加
+alter table tbl_name add foreign key(id) references ref_tbl_name(ref_col_name) &#91;on delete,on update];
+/*
+&#91;ON DELETE 删除操作]：定义当主表的记录被删除时，外键表的行为。常用的选项有：
+        CASCADE：当主表记录被删除时，外键表中相关记录也会被删除。
+        SET NULL：当主表记录被删除时，外键表中的相关列值将被设为 NULL。
+        NO ACTION 或 RESTRICT：如果主表记录被删除，且外键表中存在相关记录，则不允许删除。
+&#91;ON UPDATE 更新操作]：定义当主表的记录被更新时，外键表的行为。常用的选项有：
+        CASCADE：当主表记录的值被更新时，外键表中相关记录的外键值也会自动更新。
+        SET NULL：当主表记录被更新时，外键表中相关列的值会被设为 NULL。
+        NO ACTION 或 RESTRICT：不允许更新主表记录，如果外键表中存在相关记录。
+*/</code></pre>
+
+
+
+<p>唯一约束</p>
+
+
+
+<pre class="wp-block-code"><code>--唯一约束 unique
+--添加唯一约束
+--创建表时添加
+create table tbl_name(
+	id int unique,
+    name char(10)
+)
+--或
+create table tbl_name(
+	id int,
+    name char(10),
+    unique(id)
+)
+--修改表时添加
+alter table tbl_name add uniques(id);</code></pre>
+
+
+
+<p>非空约束</p>
+
+
+
+<pre class="wp-block-code"><code>--非空约束 not null
+--添加非空约束
+--创建表时添加
+create table tbl_name(
+	id int not null,
+    name char(10)
+)
+--修改表时添加
+alter table tbl_name modify id int not null;</code></pre>
+
+
+
+<h2 class="wp-block-heading">单表查询</h2>
+
+
+
+<pre class="wp-block-code"><code>--查询所有信息
+select * from tbl_name;
+--查询指定列信息
+select col_name from tbl_name;
+
+--分页查询
+select * from tbl_name order by col_name {desc|asc} limit 0,3;--从第一条数据开始显示3条数据
+
+--指定过滤条件
+select * from tbl_name where 条件
+/*
+分组函数
+avg(x)返回x列的平均值
+min(x)返回x列的最小值
+max(x)返回x列的最大值
+count(x)返回x列的行数
+sum(x)返回x列的和
+*/
+--分组查询 group by
+select * from tbl_name group by col_name;
+
+--排序
+select * from tbl_name order by &#91;asc,desc]--asc升序,desc降序，默认是asc</code></pre>
+
+
+
+<h2 class="wp-block-heading">连接查询和子查询</h2>
+
+
+
+<p>连接查询</p>
+
+
+
+<pre class="wp-block-code"><code>--内连接（INNER JOIN）是 SQL 中最常用的连接类型，它用于返回两个表中匹配的行。通过内连接，只有当两张表中某些字段的值匹配时，才会返回这些行的数据。
+--连接语法一
+select column_list from tbl_name1,tbl_name2 where condition;
+--连接语法二
+select column_list from tbl_name1 join tbl_name2 on condition
+--join 子句，指定要连接的表，并在on后指定连接条件，如果要连接多个表就使用多次join...on... ，using(col_name)等同于tbl_name1.col_name=tbl_name2.col_name
+
+--外连接（OUTER JOIN）是 SQL 中另一种常用的连接类型，它用于返回两个表中所有的匹配记录和未匹配的记录。
+select column_list from tbl_name1 join tbl_name2 {lift|right} on condition
+--左外连接返回左边表（第一个表）中的所有记录，以及右边表（第二个表）中与之匹配的记录。如果右边表没有匹配的记录，则会返回左边表的记录，并且右边表的相关列会显示 NULL。
+--右外连接与左外连接相反，返回右边表（第二个表）中的所有记录，以及左边表（第一个表）中与之匹配的记录。如果左边表没有匹配的记录，则会返回右边表的记录，并且左边表的相关列会显示 NULL。</code></pre>
+
+
+
+<p>子查询</p>
+
+
+
+<pre class="wp-block-code"><code>--单行子查询
+--查询表中年龄最小的员工信息
+select * from tbl_name where age=(select min(age) from tbl_name);
+
+--多行子查询
+--查询年龄大于所有部门平均年龄的员工信息
+select * from emp where age&gt;all(select avg(age) from emp group by dname)
+--多行子查询（Multiple-row Subquery）是指在 SQL 查询中使用子查询返回多行数据，然后将这些多行数据用于外部查询的条件中。
+/*
+多行子查询通常用于以下几种情况：
+    IN：检查某列的值是否在多行子查询的结果中。
+    ANY / SOME：与子查询结果中的任何一行进行比较。
+    ALL：与子查询结果中的所有行进行比较
+*/
+
+--关联子查询
+--查询每个部门年龄最小的员工
+select * from emp o where age=(select min(age) from emp i where i.dno=o.dno);
+--关联子查询（Correlated Subquery） 是指在 SQL 查询中，子查询的执行依赖于外部查询的每一行数据。</code></pre>
+
+
+
+<h2 class="wp-block-heading">索引和视图</h2>
+
+
+
+<p>索引</p>
+
+
+
+<pre class="wp-block-code"><code>--创建索引
+--创建表并创建索引
+create table tbl_name(id int,{index|key} index_name(col_name));
+--修改表创建索引
+alter table tbl_name add {index|key} index_name(col_name);
+--使用create index创建索引
+create &#91;unique] index index_name on tbl_name(col_name);
+
+--查询索引
+show index from tbl_name;
+
+--删除索引
+--使用alter
+alter table tbl_name drop {index|key} index_name;
+--使用drop
+drop index index_name on tbl_name;</code></pre>
+
+
+
+<p>视图</p>
+
+
+
+<pre class="wp-block-code"><code>--创建索引
+create view view_name as select_startment;
+--例
+create view v1 as select * from tbl_name where salary&gt;5000;
+
+--删除视图
+drop view view_name;</code></pre>
+
+
+
+<h2 class="wp-block-heading">内置函数</h2>
+
+
+
+<pre class="wp-block-code"><code>/*
+----数字函数
+abs(x)			x的绝对值
+ceil(x)			返回比x大的最小整数
+floor(x)		返回比x小的最大整数
+mod(n,m)		返回n除以m的余数
+pow(x,y)		返回x的y次幂
+rand(&#91;n])		返回一个随机数，如果指定n则返回的随机数固定
+round(x&#91;,d])	返回一个四舍五入的数，d指保留小数的位数，如果未指定则默认0
+truncate(x,d) 	返回一个截断后的数，d指保留小数位数
+----字符函数
+ascii(str)		返回str左侧第一个字符的数字编码，如果str为空，返回0
+char(n,...&#91;using charset_name]) 将ascii数字还原成字符
+char_length(str) 返回字符串str的字符个数
+concat(str1,str2,...) 将str1,str2...拼接成一个字符串
+instr(str,substr) 返回substr在str中的位置，没有则返回0
+locate(substr,str,&#91;position]) 返回substr在str中的位置，没有则返回0，从position位置开始，没指定就从第一个字符开始
+left(str,len)	从str左侧取长度为len的字符串
+length(str)		返回str的字节长度
+lower(str)		将str全部转成小写
+upper(str)		将str全部转成大写
+lpad(str,len,padstr) 从左侧对字符串str进行填充，长度不足len的部分用padstr填充
+rpad(str,len,padstr) 从右侧对字符串str进行填充，长度不足len的部分用padstr填充
+ltrim(str)		将字符串左侧空格删除
+rtrim(str)		将字符串右侧空格删除
+repeat(str,count)将str重复count次
+replace(str,from_str,to_str) 将字符串中所有from_str替换成to_str
+replace(str)	将字符串str的字符进行反转
+right(str,len)	从str的右侧取长度为len的字符
+space(n)		构造包含n个空格的字符串
+substr(str,pos&#91;,len]) 从str的pos指定的位置开始取字符串，如果没有指定长度len，则从pos取到末尾
+trim(&#91;remstr from] str) 从str的两侧删掉指定字符remstr，如果没指定就删除空格
+----时间函数
+1. 获取当前日期和时间
+CURRENT_DATE / CURDATE(): 返回当前的日期（不包括时间）。
+CURRENT_TIME / CURTIME(): 返回当前的时间（不包括日期）。
+CURRENT_TIMESTAMP / NOW(): 返回当前的日期和时间。
+LOCALTIME / LOCALTIMESTAMP: 返回当前的日期和时间（与 CURRENT_TIMESTAMP 等效，但用法更明确）
+2. 日期和时间的提取
+这些函数可以从日期或时间中提取具体的部分（年、月、日、小时、分钟、秒等）。
+YEAR(date): 提取年份。
+MONTH(date): 提取月份。
+DAY(date) / DAYOFMONTH(date): 提取日期中的“日”部分。
+HOUR(time): 提取小时。
+MINUTE(time): 提取分钟。
+SECOND(time): 提取秒。
+DAYOFWEEK(date): 返回星期几，1 为星期日，7 为星期六。
+WEEK(date): 返回日期所在的周数
+3. 日期和时间的计算
+DATE_ADD(date, INTERVAL expr unit): 给定日期加上指定的时间间隔。
+DATE_SUB(date, INTERVAL expr unit): 从给定日期中减去指定的时间间隔。
+DATEDIFF(date1, date2): 计算两个日期之间的天数差异。
+TIMESTAMPDIFF(unit, datetime1, datetime2): 计算两个日期时间之间的差异，按指定的单位返回（如年、月、日、小时等）。
+4. 日期格式化
+DATE_FORMAT(date, format): 按照指定的格式返回日期或时间。
+常用的格式化符号：
+%Y: 四位数年份（如 2024）
+%m: 月份（01-12）
+%d: 日（01-31）
+%H: 小时（00-23）
+%i: 分钟（00-59）
+%s: 秒（00-59）
+5. 日期和时间的转换
+STR_TO_DATE(str, format): 将字符串按照指定格式转换为日期。
+DATE(): 提取日期部分（去掉时间部分）。
+TIME(): 提取时间部分（去掉日期部分）。
+CAST(): 将日期时间转换为不同的类型（如转换为 DATE、TIME 等）。
+6. 时区处理
+一些数据库系统（如 MySQL）允许对时区进行处理：
+CONVERT_TZ(datetime, from_tz, to_tz): 将一个日期时间从一个时区转换到另一个时区
+7. 其他有用的日期函数
+LAST_DAY(date): 返回给定日期所在月的最后一天。
+NOW(): 返回当前的日期和时间。
+EXTRACT(unit FROM date): 提取指定时间部分，如年、月、日等（适用于某些数据库系统，如 PostgreSQL）。
+*/</code></pre>
+	</div>
+
+	
+	
+	
+	</article>
+<div id="share_container">
+	<div id="share" data-initialized="true">
+						<a class="no-pjax icon-wechat" tooltip="分享到微信">
+				<button class="btn btn-icon btn-success">
+					<span class="btn-inner--icon"><i class="fa fa-weixin"></i></span>
+				</button>
+			</a>
+			<a target="_blank" class="no-pjax icon-douban" tooltip="分享到豆瓣">
+				<button class="btn btn-icon btn-primary" style="background: #209261;border: none;">
+					<span aria-hidden="true">豆</span>
+				</button>
+			</a>
+			<a target="_blank" class="no-pjax icon-qq" tooltip="分享到 QQ">
+				<button class="btn btn-icon btn-primary" style="background: #2196f3;border: none;">
+					<span class="btn-inner--icon"><i class="fa fa-qq"></i></span>
+				</button>
+			</a>
+			<a target="_blank" class="no-pjax icon-qzone" tooltip="分享到 QQ 空间">
+				<button class="btn btn-icon btn-primary" style="background: #ffc107;border: none;">
+					<span class="btn-inner--icon"><i class="fa fa-star"></i></span>
+				</button>
+			</a>
+			<a target="_blank" class="no-pjax icon-weibo" tooltip="分享到微博">
+				<button class="btn btn-icon btn-warning">
+					<span class="btn-inner--icon"><i class="fa fa-weibo"></i></span>
+				</button>
+			</a>
+				<a target="_blank" class="no-pjax icon-facebook" tooltip="分享到 Facebook">
+			<button class="btn btn-icon btn-primary" style="background: #283593;border: none;">
+				<span class="btn-inner--icon"><i class="fa fa-facebook"></i></span>
+			</button>
+		</a>
+		<a target="_blank" class="no-pjax icon-twitter" tooltip="分享到 Twitter">
+			<button class="btn btn-icon btn-primary" style="background: #03a9f4;border: none;">
+				<span class="btn-inner--icon"><i class="fa fa-twitter"></i></span>
+			</button>
+		</a>
+		<a target="_blank" class="no-pjax icon-telegram" href="https://telegram.me/share/url?url=www.xiaoyaojingjv.cn&amp;text=SQL" tooltip="分享到 Telegram">
+			<button class="btn btn-icon btn-primary" style="background: #42a5f5;border: none;">
+				<span class="btn-inner--icon"><i class="fa fa-telegram"></i></span>
+			</button>
+		</a>
+				<a target="_blank" class="no-pjax icon-copy-link" id="share_copy_link" tooltip="复制链接">
+			<button class="btn btn-icon btn-default">
+				<span class="btn-inner--icon"><i class="fa fa-link"></i></span>
+			</button>
+		</a>
+	</div>
+	<button id="share_show" class="btn btn-icon btn-primary" tooltip="分享">
+		<span class="btn-inner--icon"><i class="fa fa-share"></i></span>
+	</button>
+</div>
+<script type="text/javascript">
+	socialShare("#share", {
+	    title : 'SQL',
+	    description : '用户权限及角色 创建用户 with auth_plugin是指定用户口令加密方式，不写就是默认。ro…',
+	    wechatQrcodeTitle : "分享到微信",
+	    wechatQrcodeHelper : '微信扫描二维码',
+	    source : 'http://www.xiaoyaojingjv.cn/?p=147'
+	});
+	$("#share_show")[0].onclick = function(){
+		$("#share_container").addClass("opened");
+	};
+	$("#share_copy_link")[0].onclick = function(){
+		let input = document.createElement('input');
+		document.body.appendChild(input);
+		input.setAttribute("value", window.location.href);
+		input.setAttribute("readonly", "readonly");
+		input.setAttribute("style", "opacity: 0;mouse-events:none;");
+		input.select();
+		if (document.execCommand('copy')){
+			iziToast.show({
+				title: '链接已复制',
+				message: "链接已复制到剪贴板",
+				class: 'shadow',
+				position: 'topRight',
+				backgroundColor: '#2dce89',
+				titleColor: '#ffffff',
+				messageColor: '#ffffff',
+				iconColor: '#ffffff',
+				progressBarColor: '#ffffff',
+				icon: 'fa fa-check',
+				timeout: 5000
+			});
+		}else{
+			iziToast.show({
+				title: '复制失败',
+				message: "请手动复制链接",
+				class: 'shadow',
+				position: 'topRight',
+				backgroundColor: '#f5365c',
+				titleColor: '#ffffff',
+				messageColor: '#ffffff',
+				iconColor: '#ffffff',
+				progressBarColor: '#ffffff',
+				icon: 'fa fa-close',
+				timeout: 5000
+			});
+		}
+		document.body.removeChild(input);
+	};
+</script>
+<div id="comments" class="comments-area card shadow-sm">
+	<div class="card-body">
+					<span>暂无评论</span>
+			</div>
+</div>
+
+
+<div id="post_comment" class="card shadow-sm ">
+	<div class="card-body">
+		<h2 class="post-comment-title">
+			<i class="fa fa-commenting"></i>
+			<span class="hide-on-comment-editing">发送评论</span>
+			<span class="hide-on-comment-not-editing">编辑评论</span>
+		</h2>
+		<div id="post_comment_reply_info" class="post-comment-reply" style="display: none;">
+			<span>正在回复 <b><span id="post_comment_reply_name"></span></b> 的评论 :</span>
+			<div id="post_comment_reply_preview" class="post-comment-reply-preview"></div>
+			<button id="post_comment_reply_cancel" class="btn btn-outline-primary btn-sm">取消回复</button>
+		</div>
+		<form>
+			<div class="row">
+				<div class="col-md-12">
+					<textarea id="post_comment_content" class="form-control form-control-alternative" placeholder="评论内容" name="comment" style="height: 80px;"></textarea>
+				</div>
+				<div class="col-md-12" style="height: 0;overflow: hidden;">
+					<pre id="post_comment_content_hidden" class=""></pre>
+				</div>
+			</div>
+						<div class="row hide-on-comment-editing" style="margin-bottom: -10px;">
+				<div class="col-md-4">
+					<div class="form-group">
+						<div class="input-group input-group-alternative mb-4">
+							<div class="input-group-prepend">
+								<span class="input-group-text"><i class="fa fa-user-circle"></i></span>
+							</div>
+							<input id="post_comment_name" class="form-control" placeholder="昵称" type="text" name="author" value="">
+						</div>
+					</div>
+				</div>
+				<div class="col-md-5">
+					<div class="form-group">
+						<div class="input-group input-group-alternative mb-4">
+							<div class="input-group-prepend">
+								<span class="input-group-text"><i class="fa fa-envelope"></i></span>
+							</div>
+							<input id="post_comment_email" class="form-control" placeholder="邮箱" type="email" name="email" value="">
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="form-group">
+						<div class="input-group input-group-alternative mb-4 post-comment-captcha-container" captcha="3 * 9 = ">
+							<div class="input-group-prepend">
+								<span class="input-group-text"><i class="fa fa-key"></i></span>
+							</div>
+							<input id="post_comment_captcha" class="form-control" placeholder="验证码" type="text" >
+							<style>
+								.post-comment-captcha-container:before{
+									content: attr(captcha);
+								}
+							</style>
+													</div>
+					</div>
+				</div>
+			</div>
+			<div class="row hide-on-comment-editing" id="post_comment_extra_input" style="display: none";>
+				<div class="col-md-12" style="margin-bottom: -10px;">
+					<div class="form-group">
+						<div class="input-group input-group-alternative mb-4 post-comment-link-container">
+							<div class="input-group-prepend">
+								<span class="input-group-text"><i class="fa fa-link"></i></span>
+							</div>
+							<input id="post_comment_link" class="form-control" placeholder="网站" type="text" name="url" value="">
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row hide-on-comment-editing " style="margin-top: 10px; ">
+				<div class="col-md-12">
+					<button id="post_comment_toggle_extra_input" type="button" class="btn btn-icon btn-outline-primary btn-sm" tooltip-show-extra-field="展开附加字段" tooltip-hide-extra-field="折叠附加字段">
+						<span class="btn-inner--icon"><i class="fa fa-angle-down"></i></span>
+					</button>
+				</div></div>
+			<div class="row" style="margin-top: 5px; margin-bottom: 10px;">
+				<div class="col-md-12">
+											<div class="custom-control custom-checkbox comment-post-checkbox comment-post-use-markdown">
+							<input class="custom-control-input" id="comment_post_use_markdown" type="checkbox" checked="true">
+							<label class="custom-control-label" for="comment_post_use_markdown">Markdown</label>
+						</div>
+																				<button id="post_comment_send" class="btn btn-icon btn-primary comment-btn pull-right mr-0" type="button">
+						<span class="btn-inner--icon hide-on-comment-editing"><i class="fa fa-send"></i></span>
+						<span class="btn-inner--icon hide-on-comment-not-editing"><i class="fa fa-pencil"></i></span>
+						<span class="btn-inner--text hide-on-comment-editing" style="margin-right: 0;">发送</span>
+						<span class="btn-inner--text hide-on-comment-not-editing" style="margin-right: 0;">编辑</span>
+					</button>
+					<button id="post_comment_edit_cancel" class="btn btn-icon btn-danger comment-btn pull-right hide-on-comment-not-editing" type="button" style="margin-right: 8px;">
+						<span class="btn-inner--icon"><i class="fa fa-close"></i></span>
+						<span class="btn-inner--text">取消</span>
+					</button>
+											<button id="comment_emotion_btn" class="btn btn-icon btn-primary pull-right" type="button" title="表情">
+							<i class="fa fa-smile-o" aria-hidden="true"></i>
+						</button>
+						<div id="emotion_keyboard" class="emotion-keyboard card shadow-sm bg-white">
+	<div class="emotion-keyboard-content">
+		<div class='emotion-group' index='0'><div class='emotion-item' text='|´・ω・)ノ' title=''>|´・ω・)ノ</div><div class='emotion-item' text='ヾ(≧∇≦*)ゝ' title=''>ヾ(≧∇≦*)ゝ</div><div class='emotion-item' text='(☆ω☆)' title=''>(☆ω☆)</div><div class='emotion-item' text='（╯‵□′）╯︵┴─┴' title=''>（╯‵□′）╯︵┴─┴</div><div class='emotion-item' text='￣﹃￣' title=''>￣﹃￣</div><div class='emotion-item' text='(/ω＼)' title=''>(/ω＼)</div><div class='emotion-item' text='∠( ᐛ 」∠)＿' title=''>∠( ᐛ 」∠)＿</div><div class='emotion-item' text='(๑•̀ㅁ•́ฅ)' title=''>(๑•̀ㅁ•́ฅ)</div><div class='emotion-item' text='→_→' title=''>→_→</div><div class='emotion-item' text='୧(๑•̀⌄•́๑)૭' title=''>୧(๑•̀⌄•́๑)૭</div><div class='emotion-item' text='٩(ˊᗜˋ*)و' title=''>٩(ˊᗜˋ*)و</div><div class='emotion-item' text='(ノ°ο°)ノ' title=''>(ノ°ο°)ノ</div><div class='emotion-item' text='(´இ皿இ｀)' title=''>(´இ皿இ｀)</div><div class='emotion-item' text='⌇●﹏●⌇' title=''>⌇●﹏●⌇</div><div class='emotion-item' text='(ฅ´ω`ฅ)' title=''>(ฅ´ω`ฅ)</div><div class='emotion-item' text='(╯°A°)╯︵○○○' title=''>(╯°A°)╯︵○○○</div><div class='emotion-item' text='φ(￣∇￣o)' title=''>φ(￣∇￣o)</div><div class='emotion-item' text='ヾ(´･ ･｀｡)ノ&quot;' title=''>ヾ(´･ ･｀｡)ノ&quot;</div><div class='emotion-item' text='( ง ᵒ̌皿ᵒ̌)ง⁼³₌₃' title=''>( ง ᵒ̌皿ᵒ̌)ง⁼³₌₃</div><div class='emotion-item' text='(ó﹏ò｡)' title=''>(ó﹏ò｡)</div><div class='emotion-item' text='Σ(っ °Д °;)っ' title=''>Σ(っ °Д °;)っ</div><div class='emotion-item' text='( ,,´･ω･)ﾉ&quot;(´っω･｀｡)' title=''>( ,,´･ω･)ﾉ&quot;(´っω･｀｡)</div><div class='emotion-item' text='╮(╯▽╰)╭' title=''>╮(╯▽╰)╭</div><div class='emotion-item' text='o(*////▽////*)q' title=''>o(*////▽////*)q</div><div class='emotion-item' text='＞﹏＜' title=''>＞﹏＜</div><div class='emotion-item' text='( ๑´•ω•) &quot;(ㆆᴗㆆ)' title=''>( ๑´•ω•) &quot;(ㆆᴗㆆ)</div></div><div class='emotion-group d-none' index='1'><div class='emotion-item' text='😂' title=''>😂</div><div class='emotion-item' text='😀' title=''>😀</div><div class='emotion-item' text='😅' title=''>😅</div><div class='emotion-item' text='😊' title=''>😊</div><div class='emotion-item' text='🙂' title=''>🙂</div><div class='emotion-item' text='🙃' title=''>🙃</div><div class='emotion-item' text='😌' title=''>😌</div><div class='emotion-item' text='😍' title=''>😍</div><div class='emotion-item' text='😘' title=''>😘</div><div class='emotion-item' text='😜' title=''>😜</div><div class='emotion-item' text='😝' title=''>😝</div><div class='emotion-item' text='😏' title=''>😏</div><div class='emotion-item' text='😒' title=''>😒</div><div class='emotion-item' text='🙄' title=''>🙄</div><div class='emotion-item' text='😳' title=''>😳</div><div class='emotion-item' text='😡' title=''>😡</div><div class='emotion-item' text='😔' title=''>😔</div><div class='emotion-item' text='😫' title=''>😫</div><div class='emotion-item' text='😱' title=''>😱</div><div class='emotion-item' text='😭' title=''>😭</div><div class='emotion-item' text='💩' title=''>💩</div><div class='emotion-item' text='👻' title=''>👻</div><div class='emotion-item' text='🙌' title=''>🙌</div><div class='emotion-item' text='🖕' title=''>🖕</div><div class='emotion-item' text='👍' title=''>👍</div><div class='emotion-item' text='👫' title=''>👫</div><div class='emotion-item' text='👬' title=''>👬</div><div class='emotion-item' text='👭' title=''>👭</div><div class='emotion-item' text='🌚' title=''>🌚</div><div class='emotion-item' text='🌝' title=''>🌝</div><div class='emotion-item' text='🙈' title=''>🙈</div><div class='emotion-item' text='💊' title=''>💊</div><div class='emotion-item' text='😶' title=''>😶</div><div class='emotion-item' text='🙏' title=''>🙏</div><div class='emotion-item' text='🍦' title=''>🍦</div><div class='emotion-item' text='🍉' title=''>🍉</div><div class='emotion-item' text='😣' title=''>😣</div></div><div class='emotion-group d-none' index='2'><div class='emotion-item emotion-item-sticker' code='dinosaur-shy/index.html' title=''><img class='lazyload' src='data:image/svg+xml;base64,PHN2ZyBjbGFzcz0iZW1vdGlvbi1sb2FkaW5nIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGZpbGw9Im5vbmUiIHZpZXdCb3g9Ii04IC04IDQwIDQwIiBzdHJva2U9IiM4ODgiIG9wYWNpdHk9Ii41IiB3aWR0aD0iNjAiIGhlaWdodD0iNjAiPgogIDxwYXRoIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIxLjUiIGQ9Ik0xNC44MjggMTQuODI4YTQgNCAwIDAxLTUuNjU2IDBNOSAxMGguMDFNMTUgMTBoLjAxTTIxIDEyYTkgOSAwIDExLTE4IDAgOSA5IDAgMDExOCAweiIvPgo8L3N2Zz4=' data-original='wp-content/themes/argon/stickers/dinosaur/1.jpg'/></div><div class='emotion-item emotion-item-sticker' code='dinosaur-daze/index.html' title=''><img class='lazyload' src='data:image/svg+xml;base64,PHN2ZyBjbGFzcz0iZW1vdGlvbi1sb2FkaW5nIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGZpbGw9Im5vbmUiIHZpZXdCb3g9Ii04IC04IDQwIDQwIiBzdHJva2U9IiM4ODgiIG9wYWNpdHk9Ii41IiB3aWR0aD0iNjAiIGhlaWdodD0iNjAiPgogIDxwYXRoIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIxLjUiIGQ9Ik0xNC44MjggMTQuODI4YTQgNCAwIDAxLTUuNjU2IDBNOSAxMGguMDFNMTUgMTBoLjAxTTIxIDEyYTkgOSAwIDExLTE4IDAgOSA5IDAgMDExOCAweiIvPgo8L3N2Zz4=' data-original='wp-content/themes/argon/stickers/dinosaur/2.jpg'/></div><div class='emotion-item emotion-item-sticker' code='dinosaur-sweat/index.html' title=''><img class='lazyload' src='data:image/svg+xml;base64,PHN2ZyBjbGFzcz0iZW1vdGlvbi1sb2FkaW5nIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGZpbGw9Im5vbmUiIHZpZXdCb3g9Ii04IC04IDQwIDQwIiBzdHJva2U9IiM4ODgiIG9wYWNpdHk9Ii41IiB3aWR0aD0iNjAiIGhlaWdodD0iNjAiPgogIDxwYXRoIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIxLjUiIGQ9Ik0xNC44MjggMTQuODI4YTQgNCAwIDAxLTUuNjU2IDBNOSAxMGguMDFNMTUgMTBoLjAxTTIxIDEyYTkgOSAwIDExLTE4IDAgOSA5IDAgMDExOCAweiIvPgo8L3N2Zz4=' data-original='wp-content/themes/argon/stickers/dinosaur/3.jpg'/></div><div class='emotion-item emotion-item-sticker' code='dinosaur-proud/index.html' title=''><img class='lazyload' src='data:image/svg+xml;base64,PHN2ZyBjbGFzcz0iZW1vdGlvbi1sb2FkaW5nIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGZpbGw9Im5vbmUiIHZpZXdCb3g9Ii04IC04IDQwIDQwIiBzdHJva2U9IiM4ODgiIG9wYWNpdHk9Ii41IiB3aWR0aD0iNjAiIGhlaWdodD0iNjAiPgogIDxwYXRoIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIxLjUiIGQ9Ik0xNC44MjggMTQuODI4YTQgNCAwIDAxLTUuNjU2IDBNOSAxMGguMDFNMTUgMTBoLjAxTTIxIDEyYTkgOSAwIDExLTE4IDAgOSA5IDAgMDExOCAweiIvPgo8L3N2Zz4=' data-original='wp-content/themes/argon/stickers/dinosaur/4.jpg'/></div><div class='emotion-item emotion-item-sticker' code='dinosaur-powerless/index.html' title=''><img class='lazyload' src='data:image/svg+xml;base64,PHN2ZyBjbGFzcz0iZW1vdGlvbi1sb2FkaW5nIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGZpbGw9Im5vbmUiIHZpZXdCb3g9Ii04IC04IDQwIDQwIiBzdHJva2U9IiM4ODgiIG9wYWNpdHk9Ii41IiB3aWR0aD0iNjAiIGhlaWdodD0iNjAiPgogIDxwYXRoIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIxLjUiIGQ9Ik0xNC44MjggMTQuODI4YTQgNCAwIDAxLTUuNjU2IDBNOSAxMGguMDFNMTUgMTBoLjAxTTIxIDEyYTkgOSAwIDExLTE4IDAgOSA5IDAgMDExOCAweiIvPgo8L3N2Zz4=' data-original='wp-content/themes/argon/stickers/dinosaur/5.jpg'/></div><div class='emotion-item emotion-item-sticker' code='dinosaur-pouting/index.html' title=''><img class='lazyload' src='data:image/svg+xml;base64,PHN2ZyBjbGFzcz0iZW1vdGlvbi1sb2FkaW5nIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGZpbGw9Im5vbmUiIHZpZXdCb3g9Ii04IC04IDQwIDQwIiBzdHJva2U9IiM4ODgiIG9wYWNpdHk9Ii41IiB3aWR0aD0iNjAiIGhlaWdodD0iNjAiPgogIDxwYXRoIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIxLjUiIGQ9Ik0xNC44MjggMTQuODI4YTQgNCAwIDAxLTUuNjU2IDBNOSAxMGguMDFNMTUgMTBoLjAxTTIxIDEyYTkgOSAwIDExLTE4IDAgOSA5IDAgMDExOCAweiIvPgo8L3N2Zz4=' data-original='wp-content/themes/argon/stickers/dinosaur/6.jpg'/></div><div class='emotion-item emotion-item-sticker' code='dinosaur-eating/index.html' title=''><img class='lazyload' src='data:image/svg+xml;base64,PHN2ZyBjbGFzcz0iZW1vdGlvbi1sb2FkaW5nIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGZpbGw9Im5vbmUiIHZpZXdCb3g9Ii04IC04IDQwIDQwIiBzdHJva2U9IiM4ODgiIG9wYWNpdHk9Ii41IiB3aWR0aD0iNjAiIGhlaWdodD0iNjAiPgogIDxwYXRoIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIxLjUiIGQ9Ik0xNC44MjggMTQuODI4YTQgNCAwIDAxLTUuNjU2IDBNOSAxMGguMDFNMTUgMTBoLjAxTTIxIDEyYTkgOSAwIDExLTE4IDAgOSA5IDAgMDExOCAweiIvPgo8L3N2Zz4=' data-original='wp-content/themes/argon/stickers/dinosaur/7.jpg'/></div><div class='emotion-item emotion-item-sticker' code='dinosaur-ok/index.html' title=''><img class='lazyload' src='data:image/svg+xml;base64,PHN2ZyBjbGFzcz0iZW1vdGlvbi1sb2FkaW5nIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGZpbGw9Im5vbmUiIHZpZXdCb3g9Ii04IC04IDQwIDQwIiBzdHJva2U9IiM4ODgiIG9wYWNpdHk9Ii41IiB3aWR0aD0iNjAiIGhlaWdodD0iNjAiPgogIDxwYXRoIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIxLjUiIGQ9Ik0xNC44MjggMTQuODI4YTQgNCAwIDAxLTUuNjU2IDBNOSAxMGguMDFNMTUgMTBoLjAxTTIxIDEyYTkgOSAwIDExLTE4IDAgOSA5IDAgMDExOCAweiIvPgo8L3N2Zz4=' data-original='wp-content/themes/argon/stickers/dinosaur/8.jpg'/></div><div class='emotion-item emotion-item-sticker' code='dinosaur-doubt/index.html' title=''><img class='lazyload' src='data:image/svg+xml;base64,PHN2ZyBjbGFzcz0iZW1vdGlvbi1sb2FkaW5nIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGZpbGw9Im5vbmUiIHZpZXdCb3g9Ii04IC04IDQwIDQwIiBzdHJva2U9IiM4ODgiIG9wYWNpdHk9Ii41IiB3aWR0aD0iNjAiIGhlaWdodD0iNjAiPgogIDxwYXRoIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIxLjUiIGQ9Ik0xNC44MjggMTQuODI4YTQgNCAwIDAxLTUuNjU2IDBNOSAxMGguMDFNMTUgMTBoLjAxTTIxIDEyYTkgOSAwIDExLTE4IDAgOSA5IDAgMDExOCAweiIvPgo8L3N2Zz4=' data-original='wp-content/themes/argon/stickers/dinosaur/9.jpg'/></div><div class='emotion-item emotion-item-sticker' code='dinosaur-depressed/index.html' title=''><img class='lazyload' src='data:image/svg+xml;base64,PHN2ZyBjbGFzcz0iZW1vdGlvbi1sb2FkaW5nIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGZpbGw9Im5vbmUiIHZpZXdCb3g9Ii04IC04IDQwIDQwIiBzdHJva2U9IiM4ODgiIG9wYWNpdHk9Ii41IiB3aWR0aD0iNjAiIGhlaWdodD0iNjAiPgogIDxwYXRoIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIxLjUiIGQ9Ik0xNC44MjggMTQuODI4YTQgNCAwIDAxLTUuNjU2IDBNOSAxMGguMDFNMTUgMTBoLjAxTTIxIDEyYTkgOSAwIDExLTE4IDAgOSA5IDAgMDExOCAweiIvPgo8L3N2Zz4=' data-original='wp-content/themes/argon/stickers/dinosaur/10.jpg'/></div><div class='emotion-item emotion-item-sticker' code='dinosaur-close-eyes/index.html' title=''><img class='lazyload' src='data:image/svg+xml;base64,PHN2ZyBjbGFzcz0iZW1vdGlvbi1sb2FkaW5nIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGZpbGw9Im5vbmUiIHZpZXdCb3g9Ii04IC04IDQwIDQwIiBzdHJva2U9IiM4ODgiIG9wYWNpdHk9Ii41IiB3aWR0aD0iNjAiIGhlaWdodD0iNjAiPgogIDxwYXRoIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIxLjUiIGQ9Ik0xNC44MjggMTQuODI4YTQgNCAwIDAxLTUuNjU2IDBNOSAxMGguMDFNMTUgMTBoLjAxTTIxIDEyYTkgOSAwIDExLTE4IDAgOSA5IDAgMDExOCAweiIvPgo8L3N2Zz4=' data-original='wp-content/themes/argon/stickers/dinosaur/11.jpg'/></div><div class='emotion-item emotion-item-sticker' code='dinosaur-sleeping/index.html' title=''><img class='lazyload' src='data:image/svg+xml;base64,PHN2ZyBjbGFzcz0iZW1vdGlvbi1sb2FkaW5nIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGZpbGw9Im5vbmUiIHZpZXdCb3g9Ii04IC04IDQwIDQwIiBzdHJva2U9IiM4ODgiIG9wYWNpdHk9Ii41IiB3aWR0aD0iNjAiIGhlaWdodD0iNjAiPgogIDxwYXRoIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIxLjUiIGQ9Ik0xNC44MjggMTQuODI4YTQgNCAwIDAxLTUuNjU2IDBNOSAxMGguMDFNMTUgMTBoLjAxTTIxIDEyYTkgOSAwIDExLTE4IDAgOSA5IDAgMDExOCAweiIvPgo8L3N2Zz4=' data-original='wp-content/themes/argon/stickers/dinosaur/12.jpg'/></div><div class='emotion-item emotion-item-sticker' code='dinosaur-puzzled/index.html' title=''><img class='lazyload' src='data:image/svg+xml;base64,PHN2ZyBjbGFzcz0iZW1vdGlvbi1sb2FkaW5nIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGZpbGw9Im5vbmUiIHZpZXdCb3g9Ii04IC04IDQwIDQwIiBzdHJva2U9IiM4ODgiIG9wYWNpdHk9Ii41IiB3aWR0aD0iNjAiIGhlaWdodD0iNjAiPgogIDxwYXRoIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIxLjUiIGQ9Ik0xNC44MjggMTQuODI4YTQgNCAwIDAxLTUuNjU2IDBNOSAxMGguMDFNMTUgMTBoLjAxTTIxIDEyYTkgOSAwIDExLTE4IDAgOSA5IDAgMDExOCAweiIvPgo8L3N2Zz4=' data-original='wp-content/themes/argon/stickers/dinosaur/13.jpg'/></div><div class='emotion-item emotion-item-sticker' code='dinosaur-agree/index.html' title=''><img class='lazyload' src='data:image/svg+xml;base64,PHN2ZyBjbGFzcz0iZW1vdGlvbi1sb2FkaW5nIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGZpbGw9Im5vbmUiIHZpZXdCb3g9Ii04IC04IDQwIDQwIiBzdHJva2U9IiM4ODgiIG9wYWNpdHk9Ii41IiB3aWR0aD0iNjAiIGhlaWdodD0iNjAiPgogIDxwYXRoIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIxLjUiIGQ9Ik0xNC44MjggMTQuODI4YTQgNCAwIDAxLTUuNjU2IDBNOSAxMGguMDFNMTUgMTBoLjAxTTIxIDEyYTkgOSAwIDExLTE4IDAgOSA5IDAgMDExOCAweiIvPgo8L3N2Zz4=' data-original='wp-content/themes/argon/stickers/dinosaur/14.jpg'/></div><div class='emotion-item emotion-item-sticker' code='dinosaur-crazy/index.html' title=''><img class='lazyload' src='data:image/svg+xml;base64,PHN2ZyBjbGFzcz0iZW1vdGlvbi1sb2FkaW5nIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGZpbGw9Im5vbmUiIHZpZXdCb3g9Ii04IC04IDQwIDQwIiBzdHJva2U9IiM4ODgiIG9wYWNpdHk9Ii41IiB3aWR0aD0iNjAiIGhlaWdodD0iNjAiPgogIDxwYXRoIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIxLjUiIGQ9Ik0xNC44MjggMTQuODI4YTQgNCAwIDAxLTUuNjU2IDBNOSAxMGguMDFNMTUgMTBoLjAxTTIxIDEyYTkgOSAwIDExLTE4IDAgOSA5IDAgMDExOCAweiIvPgo8L3N2Zz4=' data-original='wp-content/themes/argon/stickers/dinosaur/15.jpg'/></div><div class='emotion-item emotion-item-sticker' code='dinosaur-angry/index.html' title=''><img class='lazyload' src='data:image/svg+xml;base64,PHN2ZyBjbGFzcz0iZW1vdGlvbi1sb2FkaW5nIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGZpbGw9Im5vbmUiIHZpZXdCb3g9Ii04IC04IDQwIDQwIiBzdHJva2U9IiM4ODgiIG9wYWNpdHk9Ii41IiB3aWR0aD0iNjAiIGhlaWdodD0iNjAiPgogIDxwYXRoIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIxLjUiIGQ9Ik0xNC44MjggMTQuODI4YTQgNCAwIDAxLTUuNjU2IDBNOSAxMGguMDFNMTUgMTBoLjAxTTIxIDEyYTkgOSAwIDExLTE4IDAgOSA5IDAgMDExOCAweiIvPgo8L3N2Zz4=' data-original='wp-content/themes/argon/stickers/dinosaur/16.jpg'/></div></div><div class='emotion-group d-none' index='3'><div class='emotion-item emotion-item-sticker' code='flower-flower/index.html' title=''><img class='lazyload' src='data:image/svg+xml;base64,PHN2ZyBjbGFzcz0iZW1vdGlvbi1sb2FkaW5nIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGZpbGw9Im5vbmUiIHZpZXdCb3g9Ii04IC04IDQwIDQwIiBzdHJva2U9IiM4ODgiIG9wYWNpdHk9Ii41IiB3aWR0aD0iNjAiIGhlaWdodD0iNjAiPgogIDxwYXRoIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIxLjUiIGQ9Ik0xNC44MjggMTQuODI4YTQgNCAwIDAxLTUuNjU2IDBNOSAxMGguMDFNMTUgMTBoLjAxTTIxIDEyYTkgOSAwIDExLTE4IDAgOSA5IDAgMDExOCAweiIvPgo8L3N2Zz4=' data-original='wp-content/themes/argon/stickers/flower/1.jpg'/></div><div class='emotion-item emotion-item-sticker' code='flower-grass/index.html' title=''><img class='lazyload' src='data:image/svg+xml;base64,PHN2ZyBjbGFzcz0iZW1vdGlvbi1sb2FkaW5nIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGZpbGw9Im5vbmUiIHZpZXdCb3g9Ii04IC04IDQwIDQwIiBzdHJva2U9IiM4ODgiIG9wYWNpdHk9Ii41IiB3aWR0aD0iNjAiIGhlaWdodD0iNjAiPgogIDxwYXRoIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIxLjUiIGQ9Ik0xNC44MjggMTQuODI4YTQgNCAwIDAxLTUuNjU2IDBNOSAxMGguMDFNMTUgMTBoLjAxTTIxIDEyYTkgOSAwIDExLTE4IDAgOSA5IDAgMDExOCAweiIvPgo8L3N2Zz4=' data-original='wp-content/themes/argon/stickers/flower/2.jpg'/></div><div class='emotion-item emotion-item-sticker' code='flower-leaf/index.html' title=''><img class='lazyload' src='data:image/svg+xml;base64,PHN2ZyBjbGFzcz0iZW1vdGlvbi1sb2FkaW5nIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGZpbGw9Im5vbmUiIHZpZXdCb3g9Ii04IC04IDQwIDQwIiBzdHJva2U9IiM4ODgiIG9wYWNpdHk9Ii41IiB3aWR0aD0iNjAiIGhlaWdodD0iNjAiPgogIDxwYXRoIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIxLjUiIGQ9Ik0xNC44MjggMTQuODI4YTQgNCAwIDAxLTUuNjU2IDBNOSAxMGguMDFNMTUgMTBoLjAxTTIxIDEyYTkgOSAwIDExLTE4IDAgOSA5IDAgMDExOCAweiIvPgo8L3N2Zz4=' data-original='wp-content/themes/argon/stickers/flower/3.jpg'/></div><div class='emotion-item emotion-item-sticker' code='flower-star/index.html' title=''><img class='lazyload' src='data:image/svg+xml;base64,PHN2ZyBjbGFzcz0iZW1vdGlvbi1sb2FkaW5nIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGZpbGw9Im5vbmUiIHZpZXdCb3g9Ii04IC04IDQwIDQwIiBzdHJva2U9IiM4ODgiIG9wYWNpdHk9Ii41IiB3aWR0aD0iNjAiIGhlaWdodD0iNjAiPgogIDxwYXRoIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIxLjUiIGQ9Ik0xNC44MjggMTQuODI4YTQgNCAwIDAxLTUuNjU2IDBNOSAxMGguMDFNMTUgMTBoLjAxTTIxIDEyYTkgOSAwIDExLTE4IDAgOSA5IDAgMDExOCAweiIvPgo8L3N2Zz4=' data-original='wp-content/themes/argon/stickers/flower/4.jpg'/></div><div class='emotion-item emotion-item-sticker' code='flower-sun/index.html' title=''><img class='lazyload' src='data:image/svg+xml;base64,PHN2ZyBjbGFzcz0iZW1vdGlvbi1sb2FkaW5nIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGZpbGw9Im5vbmUiIHZpZXdCb3g9Ii04IC04IDQwIDQwIiBzdHJva2U9IiM4ODgiIG9wYWNpdHk9Ii41IiB3aWR0aD0iNjAiIGhlaWdodD0iNjAiPgogIDxwYXRoIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIxLjUiIGQ9Ik0xNC44MjggMTQuODI4YTQgNCAwIDAxLTUuNjU2IDBNOSAxMGguMDFNMTUgMTBoLjAxTTIxIDEyYTkgOSAwIDExLTE4IDAgOSA5IDAgMDExOCAweiIvPgo8L3N2Zz4=' data-original='wp-content/themes/argon/stickers/flower/5.jpg'/></div><div class='emotion-item emotion-item-sticker' code='flower-moon/index.html' title=''><img class='lazyload' src='data:image/svg+xml;base64,PHN2ZyBjbGFzcz0iZW1vdGlvbi1sb2FkaW5nIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGZpbGw9Im5vbmUiIHZpZXdCb3g9Ii04IC04IDQwIDQwIiBzdHJva2U9IiM4ODgiIG9wYWNpdHk9Ii41IiB3aWR0aD0iNjAiIGhlaWdodD0iNjAiPgogIDxwYXRoIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIxLjUiIGQ9Ik0xNC44MjggMTQuODI4YTQgNCAwIDAxLTUuNjU2IDBNOSAxMGguMDFNMTUgMTBoLjAxTTIxIDEyYTkgOSAwIDExLTE4IDAgOSA5IDAgMDExOCAweiIvPgo8L3N2Zz4=' data-original='wp-content/themes/argon/stickers/flower/6.jpg'/></div><div class='emotion-item emotion-item-sticker' code='flower-water/index.html' title=''><img class='lazyload' src='data:image/svg+xml;base64,PHN2ZyBjbGFzcz0iZW1vdGlvbi1sb2FkaW5nIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGZpbGw9Im5vbmUiIHZpZXdCb3g9Ii04IC04IDQwIDQwIiBzdHJva2U9IiM4ODgiIG9wYWNpdHk9Ii41IiB3aWR0aD0iNjAiIGhlaWdodD0iNjAiPgogIDxwYXRoIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIxLjUiIGQ9Ik0xNC44MjggMTQuODI4YTQgNCAwIDAxLTUuNjU2IDBNOSAxMGguMDFNMTUgMTBoLjAxTTIxIDEyYTkgOSAwIDExLTE4IDAgOSA5IDAgMDExOCAweiIvPgo8L3N2Zz4=' data-original='wp-content/themes/argon/stickers/flower/7.jpg'/></div><div class='emotion-item emotion-item-sticker' code='flower-heihei/index.html' title=''><img class='lazyload' src='data:image/svg+xml;base64,PHN2ZyBjbGFzcz0iZW1vdGlvbi1sb2FkaW5nIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGZpbGw9Im5vbmUiIHZpZXdCb3g9Ii04IC04IDQwIDQwIiBzdHJva2U9IiM4ODgiIG9wYWNpdHk9Ii41IiB3aWR0aD0iNjAiIGhlaWdodD0iNjAiPgogIDxwYXRoIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIxLjUiIGQ9Ik0xNC44MjggMTQuODI4YTQgNCAwIDAxLTUuNjU2IDBNOSAxMGguMDFNMTUgMTBoLjAxTTIxIDEyYTkgOSAwIDExLTE4IDAgOSA5IDAgMDExOCAweiIvPgo8L3N2Zz4=' data-original='wp-content/themes/argon/stickers/flower/8.jpg'/></div><div class='emotion-item emotion-item-sticker' code='flower-lemon/index.html' title=''><img class='lazyload' src='data:image/svg+xml;base64,PHN2ZyBjbGFzcz0iZW1vdGlvbi1sb2FkaW5nIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGZpbGw9Im5vbmUiIHZpZXdCb3g9Ii04IC04IDQwIDQwIiBzdHJva2U9IiM4ODgiIG9wYWNpdHk9Ii41IiB3aWR0aD0iNjAiIGhlaWdodD0iNjAiPgogIDxwYXRoIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIxLjUiIGQ9Ik0xNC44MjggMTQuODI4YTQgNCAwIDAxLTUuNjU2IDBNOSAxMGguMDFNMTUgMTBoLjAxTTIxIDEyYTkgOSAwIDExLTE4IDAgOSA5IDAgMDExOCAweiIvPgo8L3N2Zz4=' data-original='wp-content/themes/argon/stickers/flower/9.jpg'/></div><div class='emotion-item emotion-item-sticker' code='flower-birthday/index.html' title=''><img class='lazyload' src='data:image/svg+xml;base64,PHN2ZyBjbGFzcz0iZW1vdGlvbi1sb2FkaW5nIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGZpbGw9Im5vbmUiIHZpZXdCb3g9Ii04IC04IDQwIDQwIiBzdHJva2U9IiM4ODgiIG9wYWNpdHk9Ii41IiB3aWR0aD0iNjAiIGhlaWdodD0iNjAiPgogIDxwYXRoIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIxLjUiIGQ9Ik0xNC44MjggMTQuODI4YTQgNCAwIDAxLTUuNjU2IDBNOSAxMGguMDFNMTUgMTBoLjAxTTIxIDEyYTkgOSAwIDExLTE4IDAgOSA5IDAgMDExOCAweiIvPgo8L3N2Zz4=' data-original='wp-content/themes/argon/stickers/flower/10.jpg'/></div><div class='emotion-item emotion-item-sticker' code='flower-sea/index.html' title=''><img class='lazyload' src='data:image/svg+xml;base64,PHN2ZyBjbGFzcz0iZW1vdGlvbi1sb2FkaW5nIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGZpbGw9Im5vbmUiIHZpZXdCb3g9Ii04IC04IDQwIDQwIiBzdHJva2U9IiM4ODgiIG9wYWNpdHk9Ii41IiB3aWR0aD0iNjAiIGhlaWdodD0iNjAiPgogIDxwYXRoIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIxLjUiIGQ9Ik0xNC44MjggMTQuODI4YTQgNCAwIDAxLTUuNjU2IDBNOSAxMGguMDFNMTUgMTBoLjAxTTIxIDEyYTkgOSAwIDExLTE4IDAgOSA5IDAgMDExOCAweiIvPgo8L3N2Zz4=' data-original='wp-content/themes/argon/stickers/flower/11.jpg'/></div><div class='emotion-item emotion-item-sticker' code='flower-vegetable/index.html' title=''><img class='lazyload' src='data:image/svg+xml;base64,PHN2ZyBjbGFzcz0iZW1vdGlvbi1sb2FkaW5nIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGZpbGw9Im5vbmUiIHZpZXdCb3g9Ii04IC04IDQwIDQwIiBzdHJva2U9IiM4ODgiIG9wYWNpdHk9Ii41IiB3aWR0aD0iNjAiIGhlaWdodD0iNjAiPgogIDxwYXRoIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIxLjUiIGQ9Ik0xNC44MjggMTQuODI4YTQgNCAwIDAxLTUuNjU2IDBNOSAxMGguMDFNMTUgMTBoLjAxTTIxIDEyYTkgOSAwIDExLTE4IDAgOSA5IDAgMDExOCAweiIvPgo8L3N2Zz4=' data-original='wp-content/themes/argon/stickers/flower/12.jpg'/></div><div class='emotion-item emotion-item-sticker' code='flower-tile/index.html' title=''><img class='lazyload' src='data:image/svg+xml;base64,PHN2ZyBjbGFzcz0iZW1vdGlvbi1sb2FkaW5nIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGZpbGw9Im5vbmUiIHZpZXdCb3g9Ii04IC04IDQwIDQwIiBzdHJva2U9IiM4ODgiIG9wYWNpdHk9Ii41IiB3aWR0aD0iNjAiIGhlaWdodD0iNjAiPgogIDxwYXRoIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIxLjUiIGQ9Ik0xNC44MjggMTQuODI4YTQgNCAwIDAxLTUuNjU2IDBNOSAxMGguMDFNMTUgMTBoLjAxTTIxIDEyYTkgOSAwIDExLTE4IDAgOSA5IDAgMDExOCAweiIvPgo8L3N2Zz4=' data-original='wp-content/themes/argon/stickers/flower/13.jpg'/></div><div class='emotion-item emotion-item-sticker' code='flower-utf/index.html' title=''><img class='lazyload' src='data:image/svg+xml;base64,PHN2ZyBjbGFzcz0iZW1vdGlvbi1sb2FkaW5nIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGZpbGw9Im5vbmUiIHZpZXdCb3g9Ii04IC04IDQwIDQwIiBzdHJva2U9IiM4ODgiIG9wYWNpdHk9Ii41IiB3aWR0aD0iNjAiIGhlaWdodD0iNjAiPgogIDxwYXRoIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIxLjUiIGQ9Ik0xNC44MjggMTQuODI4YTQgNCAwIDAxLTUuNjU2IDBNOSAxMGguMDFNMTUgMTBoLjAxTTIxIDEyYTkgOSAwIDExLTE4IDAgOSA5IDAgMDExOCAweiIvPgo8L3N2Zz4=' data-original='wp-content/themes/argon/stickers/flower/14.jpg'/></div><div class='emotion-group-description'>Source: github.com/k4yt3x/flowerhd</div></div>	</div>
+	<div class="emotion-keyboard-bar">
+		<div class='emotion-group-name active' index='0'>颜文字</div><div class='emotion-group-name' index='1'>Emoji</div><div class='emotion-group-name' index='2'>小恐龙</div><div class='emotion-group-name' index='3'>花!</div>	</div>
+</div>									</div>
+			</div>
+			<input id="post_comment_captcha_seed" value="" style="display: none;"></input>
+			<input id="post_comment_post_id" value="147" style="display: none;"></input>
+		</form>
+	</div>
+</div>
+<div id="comment_edit_history" class="modal fade" tabindex="-1" role="dialog" aria-modal="true">
+	<div class="modal-dialog modal-lg">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h4 class="modal-title" style="font-size: 20px;"></h4>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">×</span>
+				</button>
+			</div>
+			<div class="modal-body" style="word-break: break-word;"></div>
+		</div>
+	</div>
+</div>
+<div id="comment_pin_comfirm_dialog" class="modal fade" tabindex="-1" role="dialog" aria-modal="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h4 class="modal-title" style="font-size: 20px;"></h4>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">×</span>
+				</button>
+			</div>
+			<div class="modal-body" style="word-break: break-word;"></div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-secondary btn-dismiss" data-dismiss="modal"></button>
+				<button type="button" class="btn btn-primary btn-comfirm"></button>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="post-navigation card shadow-sm"><div class="post-navigation-item post-navigation-pre"><span class="page-navigation-extra-text"><i class="fa fa-arrow-circle-o-left" aria-hidden="true"></i>上一篇</span><a href="index1a26.html?p=138" rel="prev">Mybatis</a></div><div class="post-navigation-item post-navigation-next"><span class="page-navigation-extra-text">下一篇 <i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i></span><a href="index7760.html?p=164" rel="next">快速排序</a></div></div>
+					<footer id="footer" class="site-footer card shadow-sm border-0">
+						<a href="https://beian.miit.gov.cn/" target="_blank">ICP备案号：</a>
+<a href="https://beian.miit.gov.cn/" target="_blank">皖ICP备2024069097号-1</a>
+ 						<div>Theme <a href="https://github.com/solstice23/argon-theme" target="_blank"><strong>Argon</strong></a></div>
+					</footer>
+				</main>
+			</div>
+		</div>
+		<script src="wp-content/themes/argon/argontheme99e9.js?v1.3.5"></script>
+						
+					<link rel="stylesheet" href="wp-content/themes/argon/assets/vendor/highlight/styles/vs2015.css">
+		
+	</div>
+</div>
+</body>
+
+
+<!-- Mirrored from www.xiaoyaojingjv.cn/?p=147 by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 21 Feb 2025 00:43:07 GMT -->
+</html>
